@@ -41,7 +41,7 @@ seguintes propriedades:
     { name: "O Incrível Hulk", pages: 30 }
   );
   console.log("\nLista de livros:");
-  console.log(books);
+
   /*
 Mostre no console todos os livros.
 */
