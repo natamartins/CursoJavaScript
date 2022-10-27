@@ -4,9 +4,7 @@ um único parâmetro como argumento. Essa função deve retornar `true` se o
 equivalente booleano para o valor passado no argumento for `true`, ou `false`
 para o contrário.
 */
-var isTruthy = function (unico) {
-  return unico ? true : false;
-};
+var isTruthy = (unico) => Boolean(unico);
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
 console.log(isTruthy(0));
@@ -56,25 +54,25 @@ var carro = {
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
 passado por parâmetro.
 */
-carro.mudarCor = function (cor) {
+carro.mudarCor = (cor) => {
   carro.cor = cor;
 };
 /*
 Crie um método chamado `obterCor`, que retorne a cor do carro.
 */
-carro.obterCor = function () {
+carro.obterCor = () => {
   return carro.cor;
 };
 /*
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
 */
-carro.obterModelo = function () {
+carro.obterModelo = () => {
   return carro.modelo;
 };
 /*
 Crie um método chamado `obterMarca` que retorne a marca do carro.
 */
-carro.obterMarca = function () {
+carro.obterMarca = () => {
   return carro.marca;
 };
 /*
@@ -82,7 +80,7 @@ Crie um método chamado `obterMarcaModelo`, que retorne:
 "Esse carro é um [MARCA] [MODELO]"
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
-carro.obterMarcaModelo = function () {
+carro.obterMarcaModelo = () => {
   return `Esse carro é uma ${carro.marca} ${carro.modelo}`;
 };
 /*
@@ -102,16 +100,15 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 citado acima, no lugar de "pessoas".
 */
 
-carro.addPessoas = function (numeroPessoas) {
+carro.addPessoas = (numeroPessoas) => {
   // respondida com a revisao
   var totalPessoas = carro.quantidadesPessoas + numeroPessoas;
   var pluralOuSingular = totalPessoas === 1 ? "pessoa" : "pessoas";
 
-  if (
-    carro.quantidadesPessoas === carro.assentos &&
-    totalPessoas >= carro.assentos
-  ) {
-    return "O carro já está lotado!";
+  if (totalPessoas > carro.assentos) {
+    var quantasPessoasCabem = carro.assentos - carro.quantidadesPessoas;
+
+    return `Só cabem mais ${quantasPessoasCabem} ${pluralOuSingular}!`;
   }
 
   if (totalPessoas > carro.assentos) {

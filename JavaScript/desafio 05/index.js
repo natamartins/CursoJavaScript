@@ -58,20 +58,20 @@ os livros.
 */
 // ?
 
-function book(books) {
-  var bookslist = {
+function bookName(books) {
+  var booksList = {
     HTML: { quantidadePaginas: 200, autor: "turbarkmnamà", editor: "EUS" },
     CSS: { quantidadePaginas: 100, autor: "tubaramone", editor: "NVY" },
     JavaScript: { quantidadePaginas: 400, autor: "coffee", editor: "BR" },
   };
-  return !books ? bookslist : bookslist[books];
+  return booksList[books] || booksList;
 }
 
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
 */
 // ?
-console.log(book());
+console.log(bookName());
 /*
 Ainda com a função acima, imprima a quantidade de páginas de um livro qualquer,
 usando a frase:
@@ -82,7 +82,7 @@ var filmeName = "HTML";
 
 function imprimirLivro() {
   return `O livro ${filmeName} tem ${
-    book(filmeName).quantidadePaginas
+    bookName(filmeName).quantidadePaginas
   } páginas.`;
 }
 
@@ -94,7 +94,7 @@ a frase:
 
 // ?
 function imprimirAutor() {
-  return `O autor do livro ${filmeName} é ${book(filmeName).autor} `;
+  return `O autor do livro ${filmeName} é ${bookName(filmeName).autor} `;
 }
 
 console.log(imprimirAutor());
@@ -107,7 +107,7 @@ a frase:
 */
 function imprimirEditor() {
   return `O livro ${filmeName} foi publicado pela editora ${
-    book(filmeName).editor
+    bookName(filmeName).editor
   }`;
 }
 

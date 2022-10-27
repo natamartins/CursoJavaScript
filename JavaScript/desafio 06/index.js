@@ -37,12 +37,11 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
 */
 // ?
 function showTeamPosition(num) {
-  if (num < 1 || num > 5) {
-    return "Não temos a informação do time que está nessa posição.";
-  }
-  return `O time que está em ${num}º lugar é o ${teams[num - 1]}`;
-}
+  const teamName = teams[num - 1];
+  if (teamName) return `O time que está em ${num}º lugar é o ${teamName}`;
 
+  return "Não temos a informação do time que está nessa posição.";
+}
 /*
 Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
 função acima. Entre esses 4, adicione 1 que não esteja entre os 5 primeiros.

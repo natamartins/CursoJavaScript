@@ -27,7 +27,7 @@ Adicione um método ao objeto `pessoa` chamado `fazerAniversario`. O método dev
 alterar o valor da propriedade `idade` dessa pessoa, somando `1` a cada vez que
 for chamado.
 */
-pessoa.fazerAniversario = function () {
+pessoa.fazerAniversario = () => {
   pessoa.idade++;
 };
 
@@ -41,7 +41,7 @@ valor dessa propriedade a quantidade passada por parâmetro;
 - Ele deverá modificar o valor da propriedade `andando` para o valor
 booleano que representa "verdadeiro";
 */
-pessoa.andar = function (metros) {
+pessoa.andar = (metros) => {
   pessoa.caminhouQuantosMetros += metros;
   pessoa.andando = true;
 };
@@ -49,35 +49,35 @@ pessoa.andar = function (metros) {
 Adicione um método ao objeto `pessoa` chamado `parar`, que irá modificar o valor 
 da propriedade `andando` para o valor booleano que representa "falso".
 */
-pessoa.parar = function () {
+pessoa.parar = () => {
   pessoa.andando = false;
 };
 /*
 Crie um método chamado `nomeCompleto`, que retorne a frase:
 - "Olá! Meu nome é [NOME] [SOBRENOME]!"
 */
-pessoa.nomeCompleto = function () {
+pessoa.nomeCompleto = () => {
   return `Olá! Meu nome é ${pessoa.nome} ${pessoa.sobrenome}`;
 };
 /*
 Crie um método chamado `mostrarIdade`, que retorne a frase:
 - "Olá, eu tenho [IDADE] anos!"
 */
-pessoa.mostrarIdade = function () {
+pessoa.mostrarIdade = () => {
   return `Olá, eu tenho  ${pessoa.idade}  anos!`;
 };
 /*
 Crie um método chamado `mostrarPeso`, que retorne a frase:
 - "Eu peso [PESO]Kg."
 */
-pessoa.mostrarPeso = function () {
+pessoa.mostrarPeso = () => {
   return `Eu peso ${pessoa.peso}kg`;
 };
 /*
 Crie um método chamado `mostrarAltura` que retorne a frase:
 - "Minha altura é [ALTURA]m."
 */
-pessoa.mostrarAltura = function () {
+pessoa.mostrarAltura = () => {
   return `Minha altura é ${pessoa.altura}m`;
 };
 /*
@@ -158,7 +158,7 @@ método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
 
-pessoa.apresentacao = function () {
+pessoa.apresentacao = () => {
   // repondida com a revisão
   var sexo = "o";
   var idadeAnos = "anos";
