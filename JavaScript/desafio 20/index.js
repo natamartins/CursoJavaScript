@@ -76,22 +76,19 @@ Caso contrário, mostre um alerta com a mensagem:
     - "Não enviado."
 */
   // ?
-  $button.addEventListener(
-    "click",
-    (e) => {
-      e.preventDefault();
-      if (!$inputUsername.value) return "Preencha o nome do usuário!";
-      if (!$inputEmail.value) return "Preencha o e-mail!";
-      if (!$message.value) return "Preencha a mensagem!";
-      if (!isValidEmail($inputEmail.value))
-        return "Entre com um e-mail válido!";
-      if (!confirm("Tem certeza que deseja enviar o formulário?"))
-        return alert("Não enviado");
-      return alert("Enviado com sucesso!");
-    },
-    false
-  );
-  /*
+
+  $button.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (!$inputUsername.value) return alert('"Preencha o nome do usuário!"');
+    if (!$inputEmail.value) return alert("Preencha o e-mail!");
+    if (!$message.value) return alert("Preencha a mensagem!");
+    if (!isValidEmail($inputEmail.value))
+      return alert("Entre com um e-mail válido!");
+    if (!confirm("Tem certeza que deseja enviar o formulário?"))
+      return alert("Não enviado");
+    return alert("Enviado com sucesso!");
+  });
+  /*s
 Crie uma função chamada `isValidEmail`, que será usada na validação do
 envio do formulário.
 Essa função deve receber o e-mail por parâmetro e verificar se é um e-mail
@@ -117,6 +114,6 @@ Alguns e-mails inválidos:
 */
   // ?
   function isValidEmail(email) {
-    return /ˆ[\w+.]+@\w+\.\w{2,}(?:\.\w{2})?$/gm.test(email);
+    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
   }
 })();
