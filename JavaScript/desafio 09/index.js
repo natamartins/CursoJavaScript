@@ -71,7 +71,7 @@ correto da variável ou função chamada.
     */
   // ?
   function calculator(num1, num2) {
-    return function (callback) {
+    return (callback) => {
       return callback(num1, num2);
     };
   }
@@ -92,7 +92,7 @@ correto da variável ou função chamada.
     */
   console.log("O resultado da soma é:");
   console.log(
-    sum(function (num1, num2) {
+    sum((num1, num2) => {
       return num1 + num2;
     })
   );
@@ -116,27 +116,27 @@ correto da variável ou função chamada.
     chamada.
     */
   console.log(
-    `O resultado da subtração é: ${subtraction(function (num1, num2) {
+    `O resultado da subtração é: ${subtraction((num1, num2) => {
       return num1 - num2;
     })}`
   );
   // ?
 
   console.log(
-    `O resultado da multiplicação é: ${multiplication(function (num1, num2) {
+    `O resultado da multiplicação é: ${multiplication((num1, num2) => {
       return num1 * num2;
     })}`
   );
   // ?
   console.log(
-    `O resultado da divisão é: ${division(function (num1, num2) {
+    `O resultado da divisão é: ${division((num1, num2) => {
       return num1 / num2;
     })}`
   );
   // ?
 
   console.log(
-    `O resto da divisão é: ${mod(function (num1, num2) {
+    `O resto da divisão é: ${mod((num1, num2) => {
       return num1 % num2;
     })}`
   );

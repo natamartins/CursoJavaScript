@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+.calculadora {
+  background-color: rgb(194, 194, 194);
+  width: 200px;
+  display: grid;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.calculadora input {
+  padding: 20px;
+}
+
+.calculadora div button {
+  padding: 10px;
+}

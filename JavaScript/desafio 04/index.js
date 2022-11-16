@@ -102,7 +102,7 @@ citado acima, no lugar de "pessoas".
 
 carro.addPessoas = (numeroPessoas) => {
   // respondida com a revisao
-  var totalPessoas = carro.quantidadesPessoas + numeroPessoas;
+  var totalPessoas = (carro.quantidadesPessoas += numeroPessoas);
   var pluralOuSingular = totalPessoas === 1 ? "pessoa" : "pessoas";
 
   if (totalPessoas > carro.assentos) {

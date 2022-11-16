@@ -30,19 +30,19 @@ propriedade, usando os valores passados por parâmetro.
 */
   // ?
   var operation = {
-    "+": function (x, y) {
+    "+": (x, y) => {
       return x + y;
     },
-    "-": function (x, y) {
+    "-": (x, y) => {
       return x - y;
     },
-    "*": function (x, y) {
+    "*": (x, y) => {
       return x * y;
     },
-    "/": function (x, y) {
+    "/": (x, y) => {
       return x / y;
     },
-    "%": function (x, y) {
+    "%": (x, y) => {
       return x % y;
     },
   };
@@ -78,7 +78,7 @@ os dois parâmetros da função de retorno de "calculator".
     if (!isOperatorValid(operator)) {
       return false;
     }
-    return function (x, y) {
+    return (x, y) => {
       if (typeof x !== "number" && typeof y !== "number") {
         return false;
       }
